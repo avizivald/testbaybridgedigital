@@ -3,11 +3,10 @@ import { Table } from 'react-bootstrap';
 import Cart from './Cart';
 import data from './pr/product.json'
 import './Product.css'; 
-import {addItem} from './redux/actions'
 
 function Product() {
     const books = data.books.map((book) =>
-    <Cart book= {book}/>
+    <Cart key={book.name} book= {book}/>
   );
     return (
         <div className="Product">

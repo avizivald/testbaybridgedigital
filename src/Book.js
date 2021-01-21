@@ -18,7 +18,7 @@ function Book(props) {
         setItem({[name]:[e.target.value,price]});
     }
     function addChange  (e)  {
-        if (e.target.checked &&Object.keys(item).length != 0) {
+        if (e.target.checked &&Object.keys(item).length !== 0) {
             props.addToList(item);
         } else {
             
