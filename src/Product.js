@@ -2,7 +2,8 @@ import React from 'react';
 import { Table } from 'react-bootstrap';
 import Cart from './Cart';
 import data from './pr/product.json'
-import './Product.css';
+import './Product.css'; 
+import {addItem} from './redux/actions'
 
 function Product() {
     const books = data.books.map((book) =>

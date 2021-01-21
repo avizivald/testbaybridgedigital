@@ -1,14 +1,29 @@
-import React from 'react';
-import { Button } from 'react-bootstrap';
-
+import React, { useState } from 'react';
+import { addItem } from './redux/actions';
+import { connect } from 'react-redux';
 import './Cart.css';
+const mapDispatchToProps = (dispatch) => ({
+    addToList: (item) => dispatch(addItem(Object.keys(item)[0],Object.values(item)))
+    })
 
 function Book(props) {
     const name = props.book.name;
     const author = props.book.author;
     const price = props.book.price;
-    function addBook  ()  {
-        console.log('hhhhhhhhhhhhhhhhhhhhhhh');
+
+    const [item, setItem] = useState({});
+
+  
+    function addBook  (e)  {
+        setItem({[name]:[e.target.value,price]});
+    }
+    function addChange  (e)  {
+        if (e.target.checked &&Object.keys(item).length != 0) {
+            props.addToList(item);
+        } else {
+            
+        }
+       
     }
     return (
         <React.Fragment>
@@ -16,11 +31,14 @@ function Book(props) {
                 <td>{name}</td>
                 <td>{author.name}</td>
                 <td>{price}</td>
-                <td><input type="number" onChange={addBook} /></td>
-                <td><button type="checkbox" /></td>
+                <td><input type="number" min="1"  onChange={addBook} /></td>
+                <td><input type="checkbox" onChange={addChange} /></td>
             </tr>
         </React.Fragment>
     );
 }
 
-export default Book;
+export default connect(
+    null,
+    mapDispatchToProps
+    )(Book)
