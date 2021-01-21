@@ -1,0 +1,51 @@
+{"books":
+    [ {
+        "name": "trump's life",
+        "numPage": "356",
+        "price": "84",
+        "author": {
+            "name": "bob witr",
+            "postalCode": "394221", 
+            "phoneNumbers": [
+                { "type": "home", "number": "7383627627" }
+            ]
+        }
+    },
+     {
+        "name": "obama's life",
+        "numPage": "856",
+        "price": "46",
+        "author": {
+            "name": "avi hil",
+            "postalCode": "8546", 
+            "phoneNumbers": [
+                { "type": "home", "number": "45214528" }
+            ]
+        }
+    },
+     {
+        "name": "Biden's life",
+        "numPage": "36",
+        "price": "40",
+        "author": {
+            "name": "muhamad aly",
+            "postalCode": ".247646589", 
+            "phoneNumbers": [
+                { "type": "home", "number": "3232252564" }
+            ]
+        }
+    },
+     {
+        "name": "Clinton's life",
+        "numPage": "1000",
+        "price": "50",
+        "author": {
+            "name": "tami frim",
+            "postalCode": "447856", 
+            "phoneNumbers": [
+                { "type": "home", "number": "42584598" }
+            ]
+        }
+    }
+]
+}
